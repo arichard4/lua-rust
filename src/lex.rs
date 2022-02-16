@@ -139,7 +139,7 @@ fn lex_number(raw: &[char], initial_loc: Location) -> Option<(Token, Location)> 
     }
 }
 
-fn lex_identifier(raw: &Vec<char>, initial_loc: Location) -> Option<(Token, Location)> {
+fn lex_identifier(raw: &[char], initial_loc: Location) -> Option<(Token, Location)> {
     let mut ident = String::new();
     let mut next_loc = initial_loc;
     let mut c = raw[initial_loc.index];
